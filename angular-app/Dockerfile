@@ -1,6 +1,0 @@
-node_modules
-dist
-.git
-.gitignore
-README.md
-npm-debug.log
