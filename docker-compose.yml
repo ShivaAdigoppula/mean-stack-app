@@ -1,0 +1,29 @@
+services:
+  frontend:
+    build: ./angular-app
+    container_name: angular-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./express-server
+    container_name: express-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mean_demo
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div class="card">
+    <h2>Message from Backend / MongoDB</h2>
+    <p>{{ message }}</p>
+    <button (click)="loadMessage()">Reload</button>
+  </div>
+
+  <div class="card">
+    <h2>Save New Message</h2>
+    <input [(ngModel)]="newMessage" placeholder="Enter message">
+    <button (click)="saveMessage()">Save</button>
+  </div>
+</div>

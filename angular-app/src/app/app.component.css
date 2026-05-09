@@ -1,0 +1,25 @@
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
