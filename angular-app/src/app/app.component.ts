@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   loadMessage(): void {
-    this.http.get<any>('http://localhost:3000/api/message').subscribe({
+    this.http.get<any>('http://52.90.242.211:3000/api/message').subscribe({
       next: (res) => {
         this.message = res.text;
       },
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   saveMessage(): void {
     if (!this.newMessage.trim()) return;
 
-    this.http.post<any>('http://localhost:3000/api/message', {
+    this.http.post<any>('http://52.90.242.211:3000/api/message', {
       text: this.newMessage
     }).subscribe({
       next: (res) => {
